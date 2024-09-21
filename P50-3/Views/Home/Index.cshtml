@@ -1,0 +1,41 @@
+﻿
+<head>
+    <link rel="stylesheet" />
+</head>
+@{
+    ViewData["Title"] = "Home Page";
+    string s1 = "Hellow, world!";
+    List<string> list = new List<string>();
+    list.Add("Андрюха");
+    list.Add("Илюха");
+    list.Add("Русланчик");
+    list.Add("Диана");
+    @for(int i = 0; i < 10; i++){
+        
+    }
+    @for (int i = 0; i < 10; i++)
+    {
+
+    }
+}
+
+@functions{
+    int Sum(int a, int b) => a + b;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>@DateTime.Now.ToLongDateString()</h1>
+    <h2>@ViewData["Name"]</h2>
+    <h2>@s1</h2>
+    <ul>
+        @foreach(var item in list)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <h1>@Sum(5,7)</h1>
+    <h1>@ViewData["Age"]</h1>
+    <img src="~/media/1213.jpg"/>
+</div>
